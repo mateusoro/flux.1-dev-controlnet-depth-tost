@@ -53,7 +53,7 @@ def download_file(url, save_dir):
 @torch.inference_mode()
 def generate(input):
     values = input["input"]
-
+    job_id = None 
     controlnet_image = values['input_image_check']
     controlnet_image = download_file(url=controlnet_image, save_dir='/content/ComfyUI/input')
     controlnet_strength = values['controlnet_strength']
